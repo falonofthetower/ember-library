@@ -1,21 +1,23 @@
-<h1>Invitations</h1>
+<h1>Contacts</h1>
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>ID</th>
       <th>E-mail</th>
+      <th>Message</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody>
-  {{#each model as |invitation|}}
+  {{#each model as |contact|}}
     <tr>
-      <th>{{invitation.id}}</th>
-      <td>{{invitation.email}}</td>
+      <th>{{contact.id}}</th>
+      <td>{{contact.email}}</td>
+      <td>{{contact.message}}</td>
       <td>
         <div class="panel-footer text-center">
-          <button class="btn btn-danger btn-xs" {{action 'deleteInvitation' invitation}}>Delete</button>
+          <button class="btn btn-danger btn-xs" {{action 'deleteContact' contact}}>Delete</button>
         </div>
       </td>
     </tr>
